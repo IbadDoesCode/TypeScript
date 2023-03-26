@@ -13,3 +13,18 @@ class Person {
         ${this.lastName}`
     }
 }
+
+// Class Inheritance
+class Student extends Person {
+    constructor (firstName: string,
+    lastName: string, age: number, 
+    public studentID: number       
+    ) {
+        super (firstName, 
+            lastName, age)
+    }
+    getStudentInfo():string {
+        return `${this.getFullName()}`
+    }
+}
+
